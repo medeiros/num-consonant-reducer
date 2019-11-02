@@ -16,7 +16,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ConsonantConsonantControllerIT {
+class ConsonantConsonantControllerIT {
 
   @Autowired
   private MockMvc mockMvc;
@@ -32,7 +32,7 @@ public class ConsonantConsonantControllerIT {
   @ParameterizedTest
   @CsvSource({"Daniel, 3", "Maria, 4"})
   void shouldReduceNameToNumber(String name, String number) throws Exception {
-    mockMvc.perform(get("/consonant-reducer/" + name)).andExpect(status().isOk())
+    mockMvc.perform(get("/reduce/" + name)).andExpect(status().isOk())
         .andExpect(content().string(containsString(number)));
   }
 
