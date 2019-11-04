@@ -15,7 +15,7 @@ The following table is applied in calculations:
 
 # Example
 
-	GET /consonant-reducer/Daniel
+	GET /reducer/Daniel
 
 calculation: DNL => 453 => 4+5+3 => 12 => 1+2 => 3
 
